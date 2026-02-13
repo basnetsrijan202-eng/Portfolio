@@ -1,64 +1,79 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-}
-
 body {
-  background-color: #f3f3f3;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
 }
 
-/* Navbar */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 60px;
-  background: white;
+header {
+    text-align: center;
+    padding: 2rem;
+    background-color: #1a1a1a;
+    color: white;
 }
 
-.navbar a {
-  margin-left: 20px;
-  text-decoration: none;
-  color: black;
-  font-weight: 500;
+header h1 {
+    margin-bottom: 0.5rem;
 }
 
-/* Hero Section */
-.hero {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 80px 60px;
+.car-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 2rem;
 }
 
-.hero-text {
-  max-width: 500px;
+.car-card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
 }
 
-.hero-text h1 {
-  font-size: 48px;
-  margin-bottom: 20px;
+.car-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
-.hero-text p {
-  font-size: 18px;
-  color: #555;
+.car-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
 }
 
-.hero-image img {
-  width: 350px;
-  border-radius: 40px;
-  background: #ccc;
-  padding: 20px;
+.car-card h3 {
+    margin: 1rem 0 0.5rem;
 }
 
-/* Tech Stack */
-.tech {
-  padding: 40px 60px;
+.car-card p {
+    margin: 0.5rem 0;
+    font-weight: bold;
 }
 
-.tech-icons img {
-  width: 40px;
-  margin-right: 15px;
+.car-card a {
+    display: inline-block;
+    margin: 1rem 0 1.5rem;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: white;
+    background-color: #007bff;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.car-card a:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #1a1a1a;
+    color: white;
+    margin-top: 2rem;
 }
