@@ -1,21 +1,37 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>For Marie ❤️</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-    <div class="hearts"></div>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Login - Smart Scheduler</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div class="container">
-        <h1 class="name">Marie 💖</h1>
-        <p id="typing"></p>
-        <button onclick="showMessage()">Open My Heart ❤️</button>
-        <h2 id="finalMessage"></h2>
+      <div class="form-box">
+        <h2>Welcome Back</h2>
+
+        <form onsubmit="return false;">
+          <input id="loginEmail" type="email" placeholder="Email" required />
+
+          <input
+            id="loginPassword"
+            type="password"
+            placeholder="Password"
+            required
+          />
+
+          <!-- Remember me and Forgot password -->
+          <div class="options">
+            <label><input type="checkbox" id="rememberMe"> Remember me</label>
+            <a href="#" onclick="forgotPassword()">Forgot Password?</a>
+          </div>
+
+          <button type="button" onclick="loginUser()">Login</button>
+        </form>
+      </div>
     </div>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

@@ -1,68 +1,95 @@
+/* Reset */
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'Geist', sans-serif;
+}
+
+/* Body with background image */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    height: 100vh;
-    background: linear-gradient(135deg, #ff758c, #ff7eb3);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+  min-height: 100vh;
+  background: url('./image/mountain.avif') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+/* Overlay to make form readable */
+body::before {
+  content: '';
+  position: absolute;
+  top:0; left:0; right:0; bottom:0;
+  background: rgba(0,0,0,0.3);
+  z-index: 0;
+}
+
+/* Container */
 .container {
-    background: white;
-    padding: 50px;
-    border-radius: 20px;
-    text-align: center;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 400px;
 }
 
-.name {
-    font-size: 40px;
-    color: #ff4d6d;
-    animation: glow 2s infinite alternate;
+/* Form Box */
+.form-box {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
+/* Heading */
+.form-box h2 {
+  margin-bottom: 20px;
+  font-size: 26px;
+  text-align: center;
+}
+
+/* Inputs */
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+/* Options row */
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0 20px 0;
+  font-size: 14px;
+}
+
+.options a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+.options a:hover {
+  text-decoration: underline;
+}
+
+/* Button */
 button {
-    padding: 12px 30px;
-    margin-top: 20px;
-    border: none;
-    border-radius: 30px;
-    background: #ff4d6d;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s;
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
 }
 
 button:hover {
-    transform: scale(1.1);
-    background: #e60039;
-}
-
-#finalMessage {
-    margin-top: 20px;
-    color: #ff4d6d;
-}
-
-@keyframes glow {
-    from { text-shadow: 0 0 10px #ff4d6d; }
-    to { text-shadow: 0 0 25px #ff1a4d; }
-}
-
-/* Floating hearts */
-.hearts::before,
-.hearts::after {
-    content: "❤️ ❤️ ❤️ ❤️ ❤️";
-    position: absolute;
-    width: 100%;
-    text-align: center;
-    font-size: 24px;
-    animation: float 10s linear infinite;
-}
-
-@keyframes float {
-    0% { top: 100%; }
-    100% { top: -10%; }
+  background: #45a049;
 }

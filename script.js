@@ -1,17 +1,18 @@
-const message = "Marie, from the moment you entered my life, everything started feeling brighter and more beautiful 💕";
-let index = 0;
+// Login function
+function loginUser() {
+  const email = document.getElementById('loginEmail').value;
+  const password = document.getElementById('loginPassword').value;
+  const remember = document.getElementById('rememberMe').checked;
 
-function typeEffect() {
-    if (index < message.length) {
-        document.getElementById("typing").innerHTML += message.charAt(index);
-        index++;
-        setTimeout(typeEffect, 50);
-    }
+  if(email && password){
+    alert('Email: ' + email + '\nRemember me: ' + (remember ? 'Yes' : 'No'));
+    // Add your login logic here
+  } else {
+    alert('Please enter email and password');
+  }
 }
 
-typeEffect();
-
-function showMessage() {
-    document.getElementById("finalMessage").innerHTML =
-    "Will you make me the happiest person alive and stay with me forever? 💍❤️";
+// Forgot password link
+function forgotPassword() {
+  alert('Password reset link sent to your email!');
 }
